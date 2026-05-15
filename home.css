@@ -1,0 +1,118 @@
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+
+/* Cria a margem branca em volta de toda a tela */
+body { 
+    font-family: 'Times New Roman', Times, serif; 
+    background-color: white; 
+    padding: 15px; /* Espessura da moldura branca */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Container que une Header e Banner */
+.site-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05); /* Sombra bem leve para separar da moldura */
+}
+
+header {
+    background-color: #735945; /* Tom marrom original */
+    height: 110px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    position: relative;
+    z-index: 10;
+}
+
+.logo-box {
+    background-color: white;
+    width: 95px;
+    height: 95px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.05rem;
+}
+
+.menu-icon { 
+    color: white; 
+    font-size: 1.1rem; 
+    cursor: pointer; 
+}
+
+/* Banner com a foto mais escura e fonte imponente */
+.banner {
+    /* O valor 0.4 deixa a foto mais "escurinha" para o texto brilhar */
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('floorest-premiere021.jpg');
+    background-size: cover;
+    background-position: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.banner h1 {
+    color: white;
+    font-size: 4.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.banner p {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 35px;
+    font-weight: normal;
+}
+
+.btn-produtos {
+    background-color: white;
+    color: #333;
+    padding: 16px 50px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-family: Arial, sans-serif; /* Fonte limpa para o botão */
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+.btn-produtos:hover {
+    background-color: #f2f2f2;
+    transform: scale(1.03);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .banner h1 { font-size: 2.5rem; }
+    .nav-links { display: none; } /* Esconde menu no mobile para não amontoar */
+}

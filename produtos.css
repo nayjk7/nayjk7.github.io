@@ -1,0 +1,94 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body { 
+    font-family: 'Times New Roman', Times, serif; 
+    background-color: white; 
+    padding: 15px; /* Moldura total */
+    min-height: 100vh;
+}
+
+.site-wrapper {
+    background-color: #fcfcfc;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 30px);
+}
+
+header {
+    background-color: #735945;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.logo-box { background-color: white; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; }
+.nav-links a { color: white; text-decoration: none; font-weight: bold; margin: 0 15px; }
+
+/* CONTEÚDO */
+.content-area { padding: 40px 5%; }
+.page-title { text-align: center; font-size: 2.2rem; color: #735945; margin-bottom: 30px; }
+
+/* BOTÕES DE FILTRO */
+.filter-container { display: flex; justify-content: center; gap: 10px; margin-bottom: 40px; }
+.filter-btn {
+    background: none; border: 1px solid #735945; color: #735945;
+    padding: 8px 20px; cursor: pointer; font-family: sans-serif; transition: 0.3s;
+}
+.filter-btn.active { background-color: #735945; color: white; }
+
+/* GRUPOS E GRID (3 COLUNAS) */
+.category-group { width: 100%; display: none; }
+
+.subcategory-title {
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #aaa;
+    border-bottom: 1px solid #eee;
+    padding: 20px 0 5px 0;
+    margin-bottom: 20px;
+    display: block; /* Garante que o título apareça */
+    width: 100%;
+}
+
+.grid-inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Mantém 3 produtos por linha */
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+/* CARDS */
+.card { background: white; border: 1px solid #eee; cursor: pointer; transition: 0.3s; }
+.card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+.card-img { height: 220px; background-size: cover; background-position: center; }
+.card-info { padding: 15px; text-align: center; }
+.card-info h3 { font-size: 1.1rem; margin-bottom: 5px; }
+.card-info span { font-family: sans-serif; font-size: 0.75rem; color: #999; text-transform: uppercase; }
+
+/* MODAL */
+.modal {
+    display: none; position: fixed; z-index: 1000; left: 0; top: 0;
+    width: 100%; height: 100%; background-color: rgba(0,0,0,0.8);
+    align-items: center; justify-content: center; padding: 20px;
+}
+.modal-content { background-color: white; width: 100%; max-width: 900px; position: relative; }
+.close-modal { position: absolute; right: 20px; top: 10px; font-size: 30px; cursor: pointer; color: #735945; z-index: 10; }
+.modal-body { display: flex; flex-wrap: wrap; }
+.modal-image { flex: 1; min-width: 300px; height: 410px; background-size: contain; background-repeat: no-repeat; background-position: center; background-color: #f9f9f9; image-rendering: -webkit-optimize-contrast; }
+.modal-text { flex: 1; min-width: 300px; padding: 40px; display: flex; flex-direction: column; justify-content: center; }
+.btn-whatsapp {
+    background-color: #25d366; color: white; text-align: center;
+    padding: 15px; text-decoration: none; font-weight: bold; margin-top: 20px; border-radius: 4px;
+}
+#modalDescription{
+    white-space: pre-line;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 992px) { .grid-inner { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .grid-inner { grid-template-columns: 1fr; } .modal-body { flex-direction: column; } }
+

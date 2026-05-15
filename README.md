@@ -1,1 +1,0 @@
-# nayjk7.github.io

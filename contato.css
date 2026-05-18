@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Times New Roman', Times, serif; 
 }
 
 body {
@@ -10,12 +10,13 @@ body {
     padding-top: 100px;
 }
 
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 8%;
-    background-color: #ffffff;
+    background-color: #735945;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     position: fixed;
     top: 0;
@@ -25,7 +26,7 @@ header {
 }
 
 header .logo img {
-    height: 50px;
+    height: 80px;
 }
 
 nav ul {
@@ -39,13 +40,10 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: #ffffff;
     font-weight: 600;
     transition: 0.3s;
-}
 
-nav ul li a:hover, nav ul li a.active {
-    color: #0b2545;
 }
 
 .contato-container {
@@ -66,7 +64,7 @@ nav ul li a:hover, nav ul li a.active {
 }
 
 .contato-info h2 {
-    color: #0b2545;
+    color:  #735945;
     font-size: 2rem;
     margin-bottom: 8px;
 }
@@ -85,7 +83,7 @@ nav ul li a:hover, nav ul li a.active {
 
 .info-item i {
     font-size: 1.4rem;
-    color: #134074;
+    color:  #735945;
     margin-right: 20px;
     margin-top: 3px;
     width: 25px;
@@ -106,7 +104,7 @@ nav ul li a:hover, nav ul li a.active {
 }
 
 .info-item a:hover {
-    color: #134074;
+    color:  #735945;
     text-decoration: underline;
 }
 
